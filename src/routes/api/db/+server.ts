@@ -7,7 +7,7 @@ import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async ({ locals, url, fetch }) => {
 	if (dev) {
-		const remote = new URL("https://d1-manager.pages.dev" + url.pathname + url.search);
+		const remote = new URL("https://hfoc-d1-database-manager.pages.dev" + url.pathname + url.search);
 		return fetch(remote);
 	}
 
