@@ -4,7 +4,7 @@ import type { RequestHandler } from "./$types";
 
 export const POST: RequestHandler = async ({ request, params, locals, url, fetch }) => {
 	if (dev) {
-		const remote = new URL("https://hfoc-d1-database-manager.pages.dev" + url.pathname + url.search);
+		const remote = new URL("/" + url.pathname + url.search);
 		const res = await fetch(remote, {
 			method: "POST",
 			body: await request.text(),
